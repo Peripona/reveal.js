@@ -1715,3 +1715,25 @@ $controlsArrowAngleActive: 36deg;
 .zoomed .reveal .roll span:after {
 	visibility: hidden;
 }
+
+/*********
+ * Extend
+ *********/
+
+.highlight-white {
+  color: ghostwhite;
+}
+
+.clean-img {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.jest-logo {
+  position: relative;
+  top: 40px;
+}
+
+.color-grey {
+  color: gray;
+}
