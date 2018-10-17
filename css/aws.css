@@ -4,3 +4,11 @@
     width: 10%;
     margin: -10px 10px !important;
 }
+
+.labs-section img {
+    border: none !important;
+    box-shadow: none !important
+}
+.iam-example {
+    font-size: 0.55em;
+}
