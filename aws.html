@@ -42,50 +42,76 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>
-					<h1>AWS</h1>
-					<h3>Developing on <img class="clean-img aws-logo" src="img/aws/aws-logo.png" alt="Aws Logo" /></h3>
+				<section id="Home">
+					<h3>Developing on <img class="clean-img aws-logo fragment highlight" src="img/aws/aws-logo.png" alt="Aws Logo" /></h3>
 					<p>
-						<small>Created by <a href="http://peripona.com">Tarandeep Singh</a></small>
+						<small>By <a href="http://peripona.com">Tarandeep Singh</a></small>
 					</p>
 				</section>
 
-				<section id="Labs">
-					<h2>The Labs</h2>
-					<ol>
-                        <li class="fragment highlight">Introduction to IAM</li>
-                        <li class="fragment highlight">Developing Storage Solutions with Amazon S3</li>
-                        <li class="fragment highlight">Developing Flexible NoSQL Solutions with Amazon DynamoDB</li>
-                        <li class="fragment highlight">Developing Event-Driven Solutions with AWS Lambda</li>
-                        <li class="fragment highlight">Developing Messaging Solutions with Amazon SNS and Amazon SQS</li>
-                        <li class="fragment highlight">Developing an end to end Application with AWS</li>
-					</ol>
-				</section>
-				
-				<section class="labs-section" data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
-					<section><img src="img/aws/labs/lab1.png" alt="img"/></section>
-					<section><img src="img/aws/labs/lab2.png" alt="img"/></section>
-					<section><img src="img/aws/labs/lab3.png" alt="img"/></section>
-					<section><img src="img/aws/labs/lab4.png" alt="img"/></section>
-					<section><img src="img/aws/labs/lab5.png" alt="img"/></section>
-					<section><img src="img/aws/labs/lab6.png" alt="img"/></section>
+				<section class="transparent-background" data-background="img/aws/aws-logo.png" id="Agenda" data-background-opacity="0.2" data-background-repeat="repeat" data-background-size="100px">
+						<h2>3 Days Agenda</h2>
 				</section>
 
-				<section id="iam-example" class="iam-example">
-					<!-- <h3>IAM Example</h3>
-					<h4>Example Maria starts her own company and decides to use AWS for its cloud-based infrastructure.</h4>
-					<pre>
-						<ol class="">
-							<li> She opens an AWS account. This is her company's AWS account credentials, and as such should not be used for day-to-day administration.</li>
-							<li> Maria creates an IAM user for herself to use as her primary login.</li>
-							<li> She applies a set of basic permissions to her IAM user. To provide the most fine-grained level of access control, she gives this IAM user read-only access to all AWS services. AWS offers managed policies, which include read-only, full access, and other basic permission configurations. Users with appropriate IAM permissions (and AWS account credentials) use these policies, modify them, or even create their own.</li>
-							<li> With her AWS account credentials, she creates an IAM group only for administrators.</li>
-							<li> She applies a specific policy that grants this IAM group administrative access to AWS services.</li>
-							<li> She adds her IAM user account to this group, which grants that IAM user the (AWS)</li>
-						</ol>
-					</pre> -->
-					
+				<section data-background-color="#b5533c" data-transition="concave">
+					<section data-transition="convex">
+						<img src="img/aws/agenda/day1.png" alt="img"/>
+					</section>
+					<section data-transition="convex">
+						<img src="img/aws/agenda/day2.png" alt="img"/>
+					</section>
+					<section data-transition="convex">
+						<img src="img/aws/agenda/day3.png" alt="img"/>
+					</section>
 				</section>
+				
+				<section class="labs-section" id="Labs" data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
+					<section>
+						<h3>Introduction to IAM</h3>
+						<img src="img/aws/labs/lab1.png" alt="img"/>
+					</section>
+					<section>
+						<h3>Developing Storage Solutions with Amazon S3</h3>
+						<img src="img/aws/labs/lab2.png" alt="img"/>
+					</section>
+					<section>
+						<h3>Developing Flexible NoSQL Solutions with Amazon DynamoDB</h3>
+						<img src="img/aws/labs/lab3.png" alt="img"/>
+					</section>
+					<section>
+						<h3>Developing Event-Driven Solutions with AWS Lambda</h3>
+						<img src="img/aws/labs/lab4.png" alt="img"/>
+					</section>
+					<section>
+						<h3>Developing Messaging Solutions with Amazon SNS and Amazon SQS</h3>
+						<img src="img/aws/labs/lab5.png" alt="img"/>
+					</section>
+					<section>
+						<h3>Developing an end to end Application with AWS</h3>
+						<img src="img/aws/labs/lab6.png" alt="img"/>
+					</section>
+				</section>
+
+				<!-- <section>
+					<h3>IAM Example</h3>
+					<p class="font-s">Example Maria starts her own company and decides to use AWS for its cloud-based infrastructure.
+						1. She opens an AWS account. This is her company's AWS account credentials, and as such should not be used for day-to-day administration.
+						2. Maria creates an IAM user for herself to use as her primary login.
+						3. She applies a set of basic permissions to her IAM user. To provide the most fine-grained level of access control, she gives this IAM user read-only access to all AWS services. AWS offers managed policies, which include read-only, full access, and other basic permission configurations. Users with appropriate IAM permissions (and AWS account credentials) use these policies, modify them, or even create their own.
+						4. With her AWS account credentials, she creates an IAM group only for administrators.
+						5. She applies a specific policy that grants this IAM group administrative access to AWS services.
+						6. She adds her IAM user account to this group, which grants that IAM user the (AWS) permissions of the group for as long as that IAM user is kept in that group.
+						7. She hires another administrator, Joe, and gives him an IAM user account with read-only access. She wants to manage the group policies herself because she's worried that Joe is new and might make a mistake and grant too many permissions to the wrong users by accident. So, in his IAM's user policy, she explicitly denies him access to creating IAM groups and attaching policies to them. Technically, he doesn't yet have access to any administrative permissions. This will become relevant after the next step.
+						8. Maria adds Joe to the Administrators group. This grants Joe all of the same administrative permissions as Maria; however, because his IAM user policy includes an explicit denial of IAM group permissions, that part of his group policy is overridden, and he is denied those specified permissions.
+						9. Maria creates a new IAM group for her company's analysts. She sets the permissions granted by this group, which are less privileged than the administrators group, because analysts don't need those permissions to do their work.
+						10. Joe creates the IAM users for the analysts, grants them all their own user policies, and then places those users into the Analysts IAM group. Although he can't create IAM groups or manage their policies, he still has permissions (from his Administrator group policy) to add users to and remove them from IAM groups.
+						11. Maria and Joe repeat this process for their Developers IAM group.
+						12. Maria decides to add fine-grained access to her access controls. She creates IAM roles to grant specific permissions to specific users:
+						a. She creates the "EMR1" role, which grants extra permissions to analysts working on a single specific project. After the project is completed, she can remove that role.
+						b. She also creates the "DevApp1" role, which she uses to grant a more restrictive set of policies to some temporary staff who have been brought in to help work on a specific application. This way, temporary developers aren't granted the same broad level of access as that of the permanent staff in the Developers IAM group.
+						Note: User does not necessarily mean “a person”; it specifies the access the user can have. However, as a best practice, you want to associate each account with a specific user for accountability. For example, you want to be able to trace who launched 20 instances on October 16, 2015, through the logs
+					</p>
+				</section> -->
 
 				<section style="text-align: left;">
 					<h1>THE END</h1>

@@ -5,10 +5,19 @@
     margin: -10px 10px !important;
 }
 
+.labs-section *{
+    color: white !important;
+}
+
 .labs-section img {
     border: none !important;
     box-shadow: none !important
 }
-.iam-example {
+
+.slide-background.transparent-background {
+    opacity: 0.2 !important;
+}
+
+.font-s {
     font-size: 0.55em;
 }
