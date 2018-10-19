@@ -18,6 +18,10 @@
     opacity: 0.2 !important;
 }
 
+.color-white {
+    color: white !important;
+}
+
 .font-s {
     font-size: 0.55em;
 }
