@@ -1,0 +1,30 @@
+.mob-logo {
+	display: inline;
+	height: 80px;
+}
+
+.labs-section *{
+	color: white !important;
+}
+
+.labs-section img {
+	border: none !important;
+	box-shadow: none !important
+}
+
+.slide-background.transparent-background {
+	opacity: 0.2 !important;
+}
+
+.color-white {
+	color: white !important;
+}
+
+.font-s {
+	font-size: 0.55em;
+}
+
+.center-img {
+	width: 700px;
+	height: 650px;
+}
